@@ -73,6 +73,16 @@ public class DefualtUI : IUI
         "
         );
         cameraController = new CameraControllers.DefualtCameraController(1);
+        var geometry = new Geometry.Mesh.HalfMesh();
+        var v0 = geometry.AddVertex(new(0, 0, 0));
+        var v1 = geometry.AddVertex(new(1, 0, 0));
+        var v2 = geometry.AddVertex(new(0, 1, 0));
+        var (edge01, halfedge01) = geometry.AddEdge(v0, v1);
+        var (edge12, halfedge12) = geometry.AddEdge(v1, v2);
+        var (edge20, halfedge20) = geometry.AddEdge(v2, v0);
+        geometry.AddFace(halfedge01, halfedge12, halfedge20);
+        var mesh = Mesh.FromGeometry(geometry);
+        AddMesh(mesh);
     }
 
     public void OnRender(double obj)

@@ -49,3 +49,6 @@ C:\resource\Michelangelo\Michelangelo\bin\Debug\net8.0\runtimes\win-x64\native\S
 C:\resource\Michelangelo\Michelangelo\bin\Debug\net8.0\runtimes\win-x86\native\SDL2.dll
 C:\resource\Michelangelo\Michelangelo\obj\Debug\net8.0\Michelangelo.csproj.AssemblyReference.cache
 C:\resource\Michelangelo\Michelangelo\obj\Debug\net8.0\Michelangelo.csproj.CopyComplete
+C:\resource\Michelangelo\Michelangelo\bin\Debug\net8.0\MichelangeloGeometry.dll
+C:\resource\Michelangelo\Michelangelo\bin\Debug\net8.0\MichelangeloGeometry.pdb
+C:\resource\Michelangelo\Michelangelo\obj\Debug\net8.0\Michelangelo.sourcelink.json

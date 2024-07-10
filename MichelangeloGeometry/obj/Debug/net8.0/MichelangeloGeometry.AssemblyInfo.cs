@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Michelangelo")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("MichelangeloGeometry")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c2ecaea33fe80f8e1b7faeed825728e1f86107a")]
-[assembly: System.Reflection.AssemblyProductAttribute("Michelangelo")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Michelangelo")]
+[assembly: System.Reflection.AssemblyProductAttribute("MichelangeloGeometry")]
+[assembly: System.Reflection.AssemblyTitleAttribute("MichelangeloGeometry")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // 由 MSBuild WriteCodeFragment 类生成。

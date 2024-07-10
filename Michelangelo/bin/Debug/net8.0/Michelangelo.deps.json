@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "Michelangelo/1.0.0": {
         "dependencies": {
+          "MichelangeloGeometry": "1.0.0",
           "Silk.NET": "2.21.0"
         },
         "runtime": {
@@ -340,6 +341,11 @@
             "fileVersion": "2.30.1.0"
           }
         }
+      },
+      "MichelangeloGeometry/1.0.0": {
+        "runtime": {
+          "MichelangeloGeometry.dll": {}
+        }
       }
     }
   },
@@ -544,6 +550,11 @@
       "sha512": "sha512-5RRNMMEapbRdyFu1yk1HINakZRW0qycoTVR2DW3mb0AYsATro8Dek7POQP4H1bMpM4I3vGPkiKTM65CC9iSrCg==",
       "path": "ultz.native.sdl/2.30.1",
       "hashPath": "ultz.native.sdl.2.30.1.nupkg.sha512"
+    },
+    "MichelangeloGeometry/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

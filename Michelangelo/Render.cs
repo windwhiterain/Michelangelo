@@ -119,6 +119,17 @@ public class Mesh
     public uint[] indices;
     public int verticesCount => vertices.Length;
     public int indicesCount => indices.Length;
+    public static Mesh FromGeometry(Geometry.Mesh.IMesh mesh)
+    {
+        var vertices = new List<float>();
+        var indices = new List<uint>();
+        foreach (var positions in mesh.faceCount.Each<Face>().Select(face => mesh.Positions(face)))
+        {
+            vertices.AddRange(positions.SelectMany<Vector3, float>(a => [a.X, a.Y, a.Z]));
+            indices.Add((uint)indices.Count);
+        }
+        return new([.. vertices], [.. indices]);
+    }
     public Mesh(float[] vertices, uint[] indices)
     {
         this.vertices = vertices;

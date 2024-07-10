@@ -1,0 +1,12 @@
+C:\resource\Michelangelo\MichelangeloGeometry\bin\Debug\net8.0\MichelangeloGeometry.deps.json
+C:\resource\Michelangelo\MichelangeloGeometry\bin\Debug\net8.0\MichelangeloGeometry.dll
+C:\resource\Michelangelo\MichelangeloGeometry\bin\Debug\net8.0\MichelangeloGeometry.pdb
+C:\resource\Michelangelo\MichelangeloGeometry\obj\Debug\net8.0\MichelangeloGeometry.GeneratedMSBuildEditorConfig.editorconfig
+C:\resource\Michelangelo\MichelangeloGeometry\obj\Debug\net8.0\MichelangeloGeometry.AssemblyInfoInputs.cache
+C:\resource\Michelangelo\MichelangeloGeometry\obj\Debug\net8.0\MichelangeloGeometry.AssemblyInfo.cs
+C:\resource\Michelangelo\MichelangeloGeometry\obj\Debug\net8.0\MichelangeloGeometry.csproj.CoreCompileInputs.cache
+C:\resource\Michelangelo\MichelangeloGeometry\obj\Debug\net8.0\MichelangeloGeometry.sourcelink.json
+C:\resource\Michelangelo\MichelangeloGeometry\obj\Debug\net8.0\MichelangeloGeometry.dll
+C:\resource\Michelangelo\MichelangeloGeometry\obj\Debug\net8.0\refint\MichelangeloGeometry.dll
+C:\resource\Michelangelo\MichelangeloGeometry\obj\Debug\net8.0\MichelangeloGeometry.pdb
+C:\resource\Michelangelo\MichelangeloGeometry\obj\Debug\net8.0\ref\MichelangeloGeometry.dll

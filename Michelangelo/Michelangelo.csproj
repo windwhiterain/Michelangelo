@@ -12,4 +12,8 @@
     <PackageReference Include="Silk.NET" Version="2.21.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MichelangeloGeometry\MichelangeloGeometry.csproj" />
+  </ItemGroup>
+
 </Project>
