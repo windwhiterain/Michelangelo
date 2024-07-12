@@ -104,9 +104,9 @@ public class HalfMeshTopology : HalfNetTopology, IMeshTopology
         if (loop.IsNull()) { yield break; }
         do
         {
-            var halfEdge = halfFaceDatas[loop].halfEdge;
-            yield return To(halfEdge);
-            loop = halfEdgeDatas[Next(halfEdge)].halfFace;
+            var halfFaceData = halfFaceDatas[loop];
+            yield return To(halfFaceData.halfEdge);
+            loop = halfFaceData.next;
         } while (loop != start);
     }
 }

@@ -39,6 +39,7 @@ public class DefualtUI : IUI
     public string Title => "Michelangelo";
     List<Mesh> meshes = new();
     Shader shader;
+    Mesh mesh;
     ICameraController cameraController;
     public void AddMesh(Mesh mesh)
     {
@@ -48,7 +49,7 @@ public class DefualtUI : IUI
     public void OnLoad()
     {
         shader = new(
-        @"
+                @"
         #version 330 core 
 
         layout (location = 0) in vec4 vPos;
@@ -61,7 +62,7 @@ public class DefualtUI : IUI
             gl_Position = Project*View*vec4(vPos.x, vPos.y, vPos.z, 1.0);
         }
         ",
-        @"
+                @"
         #version 330 core
 
         out vec4 FragColor;
@@ -72,16 +73,19 @@ public class DefualtUI : IUI
         }
         "
         );
+
         cameraController = new CameraControllers.DefualtCameraController(1);
-        var geometry = new Geometry.Mesh.HalfMesh();
-        var v0 = geometry.AddVertex(new(0, 0, 0));
-        var v1 = geometry.AddVertex(new(1, 0, 0));
-        var v2 = geometry.AddVertex(new(0, 1, 0));
+
+        var geometry = new Michelangelo.Geometry.Mesh.HalfMesh();
+        var v0 = geometry.AddVertex(new(-10, -10, -10));
+        var v1 = geometry.AddVertex(new(20, 0, 0));
+        var v2 = geometry.AddVertex(new(10, 10, 10));
         var (edge01, halfedge01) = geometry.AddEdge(v0, v1);
         var (edge12, halfedge12) = geometry.AddEdge(v1, v2);
         var (edge20, halfedge20) = geometry.AddEdge(v2, v0);
         geometry.AddFace(halfedge01, halfedge12, halfedge20);
-        var mesh = Mesh.FromGeometry(geometry);
+        mesh = Mesh.FromGeometry(geometry);
+
         AddMesh(mesh);
     }
 
@@ -125,6 +129,7 @@ public class DefualtUI : IUI
     public void Release()
     {
         shader.Release();
+        mesh.Release();
     }
 
 }

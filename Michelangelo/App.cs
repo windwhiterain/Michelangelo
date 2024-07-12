@@ -32,27 +32,14 @@ public static class App
         window.FramebufferResize += ui.OnFramebufferResize;
 
     }
-    static Mesh mesh;
     static void Initialize()
     {
         gl = GL.GetApi(window);
-        mesh = new Mesh([
-            //X    Y      Z
-             0.5f,  0.5f, 0.0f,
-             0.5f, -0.5f, 0.0f,
-            -0.5f, -0.5f, 0.0f,
-            -0.5f,  0.5f, 0.5f
-        ], [
-            0, 1, 3,
-            1, 2, 3
-        ]);
-        ui.AddMesh(mesh);
     }
     static void Main()
     {
         window.Run();
         ui.Release();
-        mesh.Release();
         window.Dispose();
     }
     static void ForwardInput()

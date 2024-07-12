@@ -9,8 +9,8 @@ public static class RHIImpl
     }
     static public void DrawMesh(this RHI rhi, Mesh mesh, Shader shader)
     {
+        shader.Activate();
         rhi.gl.BindVertexArray(mesh.vao);
-        rhi.gl.UseProgram(shader.handle);
         unsafe
         {
             rhi.gl.DrawElements(PrimitiveType.Triangles, (uint)mesh.verticesCount, DrawElementsType.UnsignedInt, null);
@@ -37,6 +37,7 @@ public class Shader
         if (!string.IsNullOrWhiteSpace(infoLog))
         {
             Console.WriteLine($"Error compiling vertex shader {infoLog}");
+            throw new Exception();
         }
 
         //Creating a fragment shader.
@@ -49,6 +50,7 @@ public class Shader
         if (!string.IsNullOrWhiteSpace(infoLog))
         {
             Console.WriteLine($"Error compiling fragment shader {infoLog}");
+            throw new Exception();
         }
 
         //Combining the shaders under one shader program.
@@ -62,6 +64,7 @@ public class Shader
         if (status == 0)
         {
             Console.WriteLine($"Error linking shader {gl.GetProgramInfoLog(handle)}");
+            throw new Exception();
         }
 
         //Delete the no longer useful individual shaders;
@@ -69,12 +72,17 @@ public class Shader
         gl.DetachShader(handle, fragmentShader);
         gl.DeleteShader(vertexShader);
         gl.DeleteShader(fragmentShader);
+    }
+    public void Activate()
+    {
+        var gl = App.gl;
         unsafe
         {
             //Tell opengl how to give the data to the shaders.
             gl.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 3 * sizeof(float), null);
         }
         gl.EnableVertexAttribArray(0);
+        gl.UseProgram(handle);
     }
     public void Release()
     {
@@ -126,7 +134,7 @@ public class Mesh
         foreach (var positions in mesh.faceCount.Each<Face>().Select(face => mesh.Positions(face)))
         {
             vertices.AddRange(positions.SelectMany<Vector3, float>(a => [a.X, a.Y, a.Z]));
-            indices.Add((uint)indices.Count);
+            indices.AddRange([(uint)indices.Count, (uint)indices.Count + 1, (uint)indices.Count + 2]);
         }
         return new([.. vertices], [.. indices]);
     }

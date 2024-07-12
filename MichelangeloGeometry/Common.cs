@@ -50,7 +50,12 @@ public class DynamicArray<K, V>(V defualtValue) where K : IIndex<K>
     {
         while (index >= array.Length)
         {
-            array = Enumerable.Repeat<V>(defualtValue, array.Length * 2).ToArray();
+            var newArray = Enumerable.Repeat<V>(defualtValue, array.Length * 2).ToArray();
+            for (int i = 0; i < array.Length; i++)
+            {
+                newArray[i] = array[i];
+            }
+            array = newArray;
         }
         count = Math.Max(index + 1, count);
     }
@@ -61,8 +66,30 @@ public class DynamicArray<K, V>(V defualtValue) where K : IIndex<K>
         array[index] = item;
         return K.New(index);
     }
-    public ref V this[K index] { get { IncludeIndex(index.index); return ref array[index.index]; } }
-    public ref V this[int index] { get { IncludeIndex(index); return ref array[index]; } }
+    public ref V this[K index]
+    {
+        get
+        {
+            IncludeIndex(index.index);
+            if (index.index > array.Length || index.index < 0)
+            {
+                Console.WriteLine($"{index.index} out of 0..{array.Length}");
+            }
+            return ref array[index.index];
+        }
+    }
+    public ref V this[int index]
+    {
+        get
+        {
+            IncludeIndex(index);
+            if (index > array.Length || index < 0)
+            {
+                Console.WriteLine($"{index} out of 0..{array.Length}");
+            }
+            return ref array[index];
+        }
+    }
     public delegate void Operator(ref V _);
     public delegate void Operator<T1>(ref V _, ref T1 a1);
     public delegate void Operator<T1, T2>(ref V _, ref T1 a1, ref T2 a2);
