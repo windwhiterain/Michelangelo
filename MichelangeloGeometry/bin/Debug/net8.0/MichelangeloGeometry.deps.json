@@ -7,14 +7,41 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "MichelangeloGeometry/1.0.0": {
+        "dependencies": {
+          "MichelangeloBVH": "1.0.0",
+          "MichelangeloMath": "1.0.0"
+        },
         "runtime": {
           "MichelangeloGeometry.dll": {}
+        }
+      },
+      "MichelangeloBVH/1.0.0": {
+        "dependencies": {
+          "MichelangeloMath": "1.0.0"
+        },
+        "runtime": {
+          "MichelangeloBVH.dll": {}
+        }
+      },
+      "MichelangeloMath/1.0.0": {
+        "runtime": {
+          "MichelangeloMath.dll": {}
         }
       }
     }
   },
   "libraries": {
     "MichelangeloGeometry/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MichelangeloBVH/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MichelangeloMath/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

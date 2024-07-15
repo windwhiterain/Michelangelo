@@ -1,4 +1,5 @@
 using System.Numerics;
+using Michelangelo.Math;
 using Silk.NET.OpenGL;
 namespace Michelangelo.Render;
 public static class RHIImpl
@@ -133,7 +134,7 @@ public class Mesh
         var indices = new List<uint>();
         foreach (var positions in mesh.faceCount.Each<Face>().Select(face => mesh.Positions(face)))
         {
-            vertices.AddRange(positions.SelectMany<Vector3, float>(a => [a.X, a.Y, a.Z]));
+            vertices.AddRange(positions.SelectMany<Float3, float>(a => [a.x, a.y, a.z]));
             indices.AddRange([(uint)indices.Count, (uint)indices.Count + 1, (uint)indices.Count + 2]);
         }
         return new([.. vertices], [.. indices]);

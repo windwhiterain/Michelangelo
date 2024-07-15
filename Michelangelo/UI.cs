@@ -1,10 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Numerics;
+using Michelangelo.Math;
 using Michelangelo.Render;
-using Silk.NET.Input;
-using Silk.NET.Maths;
-using Silk.NET.SDL;
-using Silk.NET.Windowing;
 
 namespace Michelangelo.UI;
 
@@ -15,7 +12,7 @@ public interface IUI
     void OnLoad();
     void OnRender(double obj);
     void OnUpdate(double obj);
-    void OnFramebufferResize(Vector2D<int> newSize);
+    void OnFramebufferResize(Int2 newSize);
     void OnInput(InputData inputData);
     void Release();
 }
@@ -27,7 +24,15 @@ public interface ICameraProject
 {
     Matrix4x4 Project { get; }
 }
-public interface ICamera : ICameraView, ICameraProject;
+public interface ICamera : ICameraView, ICameraProject
+{
+    public Ray ScreenToRay(Float2 screen)
+    {
+        var clipXY = screen * 2 - 1;
+        var clip = new Float4(clipXY.x, clipXY.y, 1, 1);
+        var world = Project * clip;
+    }
+}
 public interface IController
 {
     void OnInput(InputData inputData);
@@ -77,9 +82,9 @@ public class DefualtUI : IUI
         cameraController = new CameraControllers.DefualtCameraController(1);
 
         var geometry = new Michelangelo.Geometry.Mesh.HalfMesh();
-        var v0 = geometry.AddVertex(new(-10, -10, -10));
-        var v1 = geometry.AddVertex(new(20, 0, 0));
-        var v2 = geometry.AddVertex(new(10, 10, 10));
+        var v0 = geometry.AddVertex(new(-10, 0, 0));
+        var v1 = geometry.AddVertex(new(10, 0, 0));
+        var v2 = geometry.AddVertex(new(0, 0, 10));
         var (edge01, halfedge01) = geometry.AddEdge(v0, v1);
         var (edge12, halfedge12) = geometry.AddEdge(v1, v2);
         var (edge20, halfedge20) = geometry.AddEdge(v2, v0);
@@ -114,9 +119,9 @@ public class DefualtUI : IUI
         }
     }
 
-    public void OnFramebufferResize(Vector2D<int> newSize)
+    public void OnFramebufferResize(Int2 newSize)
     {
-        App.gl.Viewport(newSize);
+        App.gl.Viewport(new System.Drawing.Size(newSize.x, newSize.y));
     }
 
     public void OnInput(InputData inputData)
@@ -124,6 +129,10 @@ public class DefualtUI : IUI
         foreach (var controller in cameraController.agents)
         {
             controller.OnInput(inputData);
+        }
+        if (inputData is MouseInputData mouseInputData)
+        {
+            Console.Write(mouseInputData.position);
         }
     }
     public void Release()

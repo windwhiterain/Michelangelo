@@ -1,3 +1,5 @@
+using System.Numerics;
+using Michelangelo.Math;
 using Silk.NET.Input;
 
 namespace Michelangelo;
@@ -11,4 +13,9 @@ public record class KeyInputData
 (
     Key key,
     KeyInputType type
+) : InputData;
+public record class MouseInputData
+(
+    MouseButton button,
+    Float2 position
 ) : InputData;

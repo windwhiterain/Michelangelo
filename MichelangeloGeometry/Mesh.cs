@@ -1,5 +1,7 @@
 ﻿using System.Numerics;
 using System.Reflection.Metadata;
+using Michelangelo.Math;
+using Michelangelo.SpatialAccessor;
 
 namespace Michelangelo.Geometry.Mesh;
 public interface INetTopology
@@ -17,8 +19,8 @@ public interface IMeshTopology : INetTopology
 }
 public interface IMesh : IMeshTopology
 {
-    Vertex AddVertex(Vector3 position);
-    IEnumerable<Vector3> Positions(Face face);
+    Vertex AddVertex(Float3 position);
+    IEnumerable<Float3> Positions(Face face);
 }
 public class HalfNetTopology : INetTopology
 {
@@ -114,16 +116,38 @@ public class HalfMeshTopology : HalfNetTopology, IMeshTopology
 public class HalfMesh : HalfMeshTopology, IMesh
 {
     record struct VertexData(
-        Vector3 position
+        Float3 position
     );
     DynamicArray<Vertex, VertexData> vertexDatas = new(default);
 
-    public IEnumerable<Vector3> Positions(Face face) => Vertices(face).Select(vertex => vertexDatas[vertex].position);
+    public IEnumerable<Float3> Positions(Face face) => Vertices(face).Select(Position);
+    public Float3 Position(Vertex vertex) => vertexDatas[vertex].position;
 
-    public Vertex AddVertex(Vector3 position)
+    public Vertex AddVertex(Float3 position)
     {
         var ret = AddVertex();
         vertexDatas[ret].position = position;
+        VertexSpatialAccessor.Add(new(this, ret));
         return ret;
     }
+    public Vertex Vertex(Ray _)
+    {
+        if (VertexSpatialAccessor.Raycast(_, out var hit))
+        {
+            return hit.Object.vertex;
+        }
+        return IIndex<Vertex>.Null;
+    }
+    record class VertexClient
+    (
+        HalfMesh mesh,
+        Vertex vertex
+    ) : BVH<VertexClient>.Client
+    {
+        protected override Float3 Position => mesh.Position(vertex);
+
+        public override AxisBox3D Box =>
+            AxisBox3D.FromSphere(new(Position, 1));
+    }
+    BVH<VertexClient> VertexSpatialAccessor = new();
 }

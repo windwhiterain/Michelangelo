@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MichelangeloMath\MichelangeloMath.csproj" />
+    <ProjectReference Include="..\MichelangeloBVH\MichelangeloBVH.csproj" />
+  </ItemGroup>
+
 </Project>

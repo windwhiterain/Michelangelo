@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "MichelangeloBVH/1.0.0": {
+        "dependencies": {
+          "MichelangeloMath": "1.0.0"
+        },
+        "runtime": {
+          "MichelangeloBVH.dll": {}
+        }
+      },
+      "MichelangeloMath/1.0.0": {
+        "runtime": {
+          "MichelangeloMath.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MichelangeloBVH/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MichelangeloMath/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

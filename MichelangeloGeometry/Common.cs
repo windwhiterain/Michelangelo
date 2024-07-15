@@ -1,4 +1,5 @@
 namespace Michelangelo;
+using static Math.General;
 public interface IIndex
 {
     int index { get; set; }
@@ -57,7 +58,7 @@ public class DynamicArray<K, V>(V defualtValue) where K : IIndex<K>
             }
             array = newArray;
         }
-        count = Math.Max(index + 1, count);
+        count = Max(index + 1, count);
     }
     public K Add(V item)
     {

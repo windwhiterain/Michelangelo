@@ -52,3 +52,7 @@ C:\resource\Michelangelo\Michelangelo\obj\Debug\net8.0\Michelangelo.csproj.CopyC
 C:\resource\Michelangelo\Michelangelo\bin\Debug\net8.0\MichelangeloGeometry.dll
 C:\resource\Michelangelo\Michelangelo\bin\Debug\net8.0\MichelangeloGeometry.pdb
 C:\resource\Michelangelo\Michelangelo\obj\Debug\net8.0\Michelangelo.sourcelink.json
+C:\resource\Michelangelo\Michelangelo\bin\Debug\net8.0\MichelangeloBVH.dll
+C:\resource\Michelangelo\Michelangelo\bin\Debug\net8.0\MichelangeloMath.dll
+C:\resource\Michelangelo\Michelangelo\bin\Debug\net8.0\MichelangeloMath.pdb
+C:\resource\Michelangelo\Michelangelo\bin\Debug\net8.0\MichelangeloBVH.pdb

@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MichelangeloGeometry\MichelangeloGeometry.csproj" />
+    <ProjectReference Include="..\MichelangeloMath\MichelangeloMath.csproj" />
   </ItemGroup>
 
 </Project>

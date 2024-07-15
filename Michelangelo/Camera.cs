@@ -12,7 +12,7 @@ public class LookAt : ICameraView
 }
 public class Perspective : ICameraProject
 {
-    public Matrix4x4 Project => Matrix4x4.CreatePerspectiveFieldOfView((float)Math.PI * 2 / 3, (float)App.windowSize.X / App.windowSize.Y, 0.1f, 100000.0f);
+    public Matrix4x4 Project => Matrix4x4.CreatePerspectiveFieldOfView((float)Math.General.PI * 2 / 3, (float)App.windowSize.X / App.windowSize.Y, 0.1f, 100000.0f);
 }
 public class DefualtCamera : ICamera, IAgent<ICamera>
 {

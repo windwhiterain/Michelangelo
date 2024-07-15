@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Michelangelo", "Michelangel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MichelangeloGeometry", "MichelangeloGeometry\MichelangeloGeometry.csproj", "{668EB246-C817-4FD7-B1D7-D9E0A9C535F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MichelangeloBVH", "MichelangeloBVH\MichelangeloBVH.csproj", "{0E2BDADC-4BFF-458E-B9A6-35379A7C1592}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MichelangeloMath", "MichelangeloMath\MichelangeloMath.csproj", "{922F4925-BA06-428E-991E-62510B3DB306}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{668EB246-C817-4FD7-B1D7-D9E0A9C535F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{668EB246-C817-4FD7-B1D7-D9E0A9C535F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{668EB246-C817-4FD7-B1D7-D9E0A9C535F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E2BDADC-4BFF-458E-B9A6-35379A7C1592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E2BDADC-4BFF-458E-B9A6-35379A7C1592}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E2BDADC-4BFF-458E-B9A6-35379A7C1592}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E2BDADC-4BFF-458E-B9A6-35379A7C1592}.Release|Any CPU.Build.0 = Release|Any CPU
+		{922F4925-BA06-428E-991E-62510B3DB306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{922F4925-BA06-428E-991E-62510B3DB306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{922F4925-BA06-428E-991E-62510B3DB306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{922F4925-BA06-428E-991E-62510B3DB306}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,16 @@
+C:\resource\Michelangelo\MichelangeloBVH\bin\Debug\net8.0\MichelangeloBVH.deps.json
+C:\resource\Michelangelo\MichelangeloBVH\bin\Debug\net8.0\MichelangeloBVH.dll
+C:\resource\Michelangelo\MichelangeloBVH\bin\Debug\net8.0\MichelangeloBVH.pdb
+C:\resource\Michelangelo\MichelangeloBVH\bin\Debug\net8.0\MichelangeloMath.dll
+C:\resource\Michelangelo\MichelangeloBVH\bin\Debug\net8.0\MichelangeloMath.pdb
+C:\resource\Michelangelo\MichelangeloBVH\obj\Debug\net8.0\MichelangeloBVH.csproj.AssemblyReference.cache
+C:\resource\Michelangelo\MichelangeloBVH\obj\Debug\net8.0\MichelangeloBVH.GeneratedMSBuildEditorConfig.editorconfig
+C:\resource\Michelangelo\MichelangeloBVH\obj\Debug\net8.0\MichelangeloBVH.AssemblyInfoInputs.cache
+C:\resource\Michelangelo\MichelangeloBVH\obj\Debug\net8.0\MichelangeloBVH.AssemblyInfo.cs
+C:\resource\Michelangelo\MichelangeloBVH\obj\Debug\net8.0\MichelangeloBVH.csproj.CoreCompileInputs.cache
+C:\resource\Michelangelo\MichelangeloBVH\obj\Debug\net8.0\MichelangeloBVH.sourcelink.json
+C:\resource\Michelangelo\MichelangeloBVH\obj\Debug\net8.0\MichelangeloBVH.csproj.CopyComplete
+C:\resource\Michelangelo\MichelangeloBVH\obj\Debug\net8.0\MichelangeloBVH.dll
+C:\resource\Michelangelo\MichelangeloBVH\obj\Debug\net8.0\refint\MichelangeloBVH.dll
+C:\resource\Michelangelo\MichelangeloBVH\obj\Debug\net8.0\MichelangeloBVH.pdb
+C:\resource\Michelangelo\MichelangeloBVH\obj\Debug\net8.0\ref\MichelangeloBVH.dll

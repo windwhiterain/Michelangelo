@@ -9,6 +9,7 @@
       "Michelangelo/1.0.0": {
         "dependencies": {
           "MichelangeloGeometry": "1.0.0",
+          "MichelangeloMath": "1.0.0",
           "Silk.NET": "2.21.0"
         },
         "runtime": {
@@ -342,9 +343,26 @@
           }
         }
       },
+      "MichelangeloBVH/1.0.0": {
+        "dependencies": {
+          "MichelangeloMath": "1.0.0"
+        },
+        "runtime": {
+          "MichelangeloBVH.dll": {}
+        }
+      },
       "MichelangeloGeometry/1.0.0": {
+        "dependencies": {
+          "MichelangeloBVH": "1.0.0",
+          "MichelangeloMath": "1.0.0"
+        },
         "runtime": {
           "MichelangeloGeometry.dll": {}
+        }
+      },
+      "MichelangeloMath/1.0.0": {
+        "runtime": {
+          "MichelangeloMath.dll": {}
         }
       }
     }
@@ -551,7 +569,17 @@
       "path": "ultz.native.sdl/2.30.1",
       "hashPath": "ultz.native.sdl.2.30.1.nupkg.sha512"
     },
+    "MichelangeloBVH/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "MichelangeloGeometry/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MichelangeloMath/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

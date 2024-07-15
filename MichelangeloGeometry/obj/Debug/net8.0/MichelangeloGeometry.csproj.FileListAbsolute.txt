@@ -10,3 +10,9 @@ C:\resource\Michelangelo\MichelangeloGeometry\obj\Debug\net8.0\MichelangeloGeome
 C:\resource\Michelangelo\MichelangeloGeometry\obj\Debug\net8.0\refint\MichelangeloGeometry.dll
 C:\resource\Michelangelo\MichelangeloGeometry\obj\Debug\net8.0\MichelangeloGeometry.pdb
 C:\resource\Michelangelo\MichelangeloGeometry\obj\Debug\net8.0\ref\MichelangeloGeometry.dll
+C:\resource\Michelangelo\MichelangeloGeometry\bin\Debug\net8.0\MichelangeloBVH.dll
+C:\resource\Michelangelo\MichelangeloGeometry\bin\Debug\net8.0\MichelangeloMath.dll
+C:\resource\Michelangelo\MichelangeloGeometry\bin\Debug\net8.0\MichelangeloMath.pdb
+C:\resource\Michelangelo\MichelangeloGeometry\bin\Debug\net8.0\MichelangeloBVH.pdb
+C:\resource\Michelangelo\MichelangeloGeometry\obj\Debug\net8.0\MichelangeloGeometry.csproj.AssemblyReference.cache
+C:\resource\Michelangelo\MichelangeloGeometry\obj\Debug\net8.0\MichelangeloGeometry.csproj.CopyComplete

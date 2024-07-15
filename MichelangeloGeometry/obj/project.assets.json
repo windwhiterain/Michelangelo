@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "MichelangeloBVH/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MichelangeloMath": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MichelangeloBVH.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MichelangeloBVH.dll": {}
+        }
+      },
+      "MichelangeloMath/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/MichelangeloMath.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MichelangeloMath.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "MichelangeloBVH/1.0.0": {
+      "type": "project",
+      "path": "../MichelangeloBVH/MichelangeloBVH.csproj",
+      "msbuildProject": "../MichelangeloBVH/MichelangeloBVH.csproj"
+    },
+    "MichelangeloMath/1.0.0": {
+      "type": "project",
+      "path": "../MichelangeloMath/MichelangeloMath.csproj",
+      "msbuildProject": "../MichelangeloMath/MichelangeloMath.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "MichelangeloBVH >= 1.0.0",
+      "MichelangeloMath >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\17124\\.nuget\\packages\\": {},
@@ -38,7 +76,14 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\resource\\Michelangelo\\MichelangeloBVH\\MichelangeloBVH.csproj": {
+              "projectPath": "C:\\resource\\Michelangelo\\MichelangeloBVH\\MichelangeloBVH.csproj"
+            },
+            "C:\\resource\\Michelangelo\\MichelangeloMath\\MichelangeloMath.csproj": {
+              "projectPath": "C:\\resource\\Michelangelo\\MichelangeloMath\\MichelangeloMath.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

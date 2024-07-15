@@ -498,14 +498,41 @@
           }
         }
       },
+      "MichelangeloBVH/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MichelangeloMath": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MichelangeloBVH.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MichelangeloBVH.dll": {}
+        }
+      },
       "MichelangeloGeometry/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MichelangeloBVH": "1.0.0",
+          "MichelangeloMath": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/MichelangeloGeometry.dll": {}
         },
         "runtime": {
           "bin/placeholder/MichelangeloGeometry.dll": {}
+        }
+      },
+      "MichelangeloMath/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/MichelangeloMath.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MichelangeloMath.dll": {}
         }
       }
     }
@@ -1270,15 +1297,26 @@
         "ultz.native.sdl.nuspec"
       ]
     },
+    "MichelangeloBVH/1.0.0": {
+      "type": "project",
+      "path": "../MichelangeloBVH/MichelangeloBVH.csproj",
+      "msbuildProject": "../MichelangeloBVH/MichelangeloBVH.csproj"
+    },
     "MichelangeloGeometry/1.0.0": {
       "type": "project",
       "path": "../MichelangeloGeometry/MichelangeloGeometry.csproj",
       "msbuildProject": "../MichelangeloGeometry/MichelangeloGeometry.csproj"
+    },
+    "MichelangeloMath/1.0.0": {
+      "type": "project",
+      "path": "../MichelangeloMath/MichelangeloMath.csproj",
+      "msbuildProject": "../MichelangeloMath/MichelangeloMath.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "MichelangeloGeometry >= 1.0.0",
+      "MichelangeloMath >= 1.0.0",
       "Silk.NET >= 2.21.0"
     ]
   },
@@ -1316,6 +1354,9 @@
           "projectReferences": {
             "C:\\resource\\Michelangelo\\MichelangeloGeometry\\MichelangeloGeometry.csproj": {
               "projectPath": "C:\\resource\\Michelangelo\\MichelangeloGeometry\\MichelangeloGeometry.csproj"
+            },
+            "C:\\resource\\Michelangelo\\MichelangeloMath\\MichelangeloMath.csproj": {
+              "projectPath": "C:\\resource\\Michelangelo\\MichelangeloMath\\MichelangeloMath.csproj"
             }
           }
         }

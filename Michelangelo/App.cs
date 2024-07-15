@@ -1,5 +1,6 @@
 using System.Numerics;
 using Michelangelo;
+using Michelangelo.Math;
 using Michelangelo.Render;
 using Michelangelo.UI;
 using Silk.NET.Input;
@@ -49,6 +50,7 @@ public static class App
         {
             input.Keyboards[i].KeyDown += (keyboard, key, _) => { ui.OnInput(new KeyInputData(key, KeyInputType.Down)); };
             input.Keyboards[i].KeyUp += (keyboard, key, _) => { ui.OnInput(new KeyInputData(key, KeyInputType.Up)); };
+            input.Mice[0].Click += (_, button, position) => { ui.OnInput(new MouseInputData(button, new Float2(position.X, position.Y) / new Float2(window.Size.X, window.Size.Y))); };
         }
     }
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MichelangeloGeometry")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3809768959cd3810851331010015283c58cf6a28")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+988796bf800f71c92536266776eb3cfa84d5870e")]
 [assembly: System.Reflection.AssemblyProductAttribute("MichelangeloGeometry")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MichelangeloGeometry")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

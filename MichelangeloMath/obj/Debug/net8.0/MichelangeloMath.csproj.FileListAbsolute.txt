@@ -1,0 +1,12 @@
+C:\resource\Michelangelo\MichelangeloMath\bin\Debug\net8.0\MichelangeloMath.deps.json
+C:\resource\Michelangelo\MichelangeloMath\bin\Debug\net8.0\MichelangeloMath.dll
+C:\resource\Michelangelo\MichelangeloMath\bin\Debug\net8.0\MichelangeloMath.pdb
+C:\resource\Michelangelo\MichelangeloMath\obj\Debug\net8.0\MichelangeloMath.GeneratedMSBuildEditorConfig.editorconfig
+C:\resource\Michelangelo\MichelangeloMath\obj\Debug\net8.0\MichelangeloMath.AssemblyInfoInputs.cache
+C:\resource\Michelangelo\MichelangeloMath\obj\Debug\net8.0\MichelangeloMath.AssemblyInfo.cs
+C:\resource\Michelangelo\MichelangeloMath\obj\Debug\net8.0\MichelangeloMath.csproj.CoreCompileInputs.cache
+C:\resource\Michelangelo\MichelangeloMath\obj\Debug\net8.0\MichelangeloMath.sourcelink.json
+C:\resource\Michelangelo\MichelangeloMath\obj\Debug\net8.0\MichelangeloMath.dll
+C:\resource\Michelangelo\MichelangeloMath\obj\Debug\net8.0\refint\MichelangeloMath.dll
+C:\resource\Michelangelo\MichelangeloMath\obj\Debug\net8.0\MichelangeloMath.pdb
+C:\resource\Michelangelo\MichelangeloMath\obj\Debug\net8.0\ref\MichelangeloMath.dll
